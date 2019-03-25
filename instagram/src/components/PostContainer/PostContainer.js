@@ -7,6 +7,7 @@ const PostContainer = props => {
         <div className = 'postContainer'>
             {props.dummy.map(post => (
                 <Post 
+                    likes = {post.likes}
                     post = {post}
                     key = {post.imageUrl}
                 />

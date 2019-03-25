@@ -3,7 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostsContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
-// import CommentSection from './components/CommentSection/CommentSection';
+
 
 class App extends React.Component {
   constructor() {
@@ -18,7 +18,6 @@ class App extends React.Component {
       <div className="App">
         <SearchBar />
         <PostsContainer dummy = {this.state.posts} />
-        {/* <CommentSection posts = {this.state.posts} /> */}
       </div>
     );
   }
