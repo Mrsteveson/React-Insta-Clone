@@ -8,9 +8,10 @@ import './Post.css';
 class Post extends React.Component {
     constructor(props) {
         super(props);
-       this.state = {
+        this.state = {
            likes: 0,
-       }
+           active: false,
+        }
     }
    componentDidMount() {
        this.setState({
@@ -21,8 +22,10 @@ class Post extends React.Component {
 
     addALike = () => {
         let likes = this.state.likes;
+        const activeState = this.state.active;
         this.setState({
-            likes: likes + 1
+            likes: likes + 1,
+            active: !activeState
         })
     }
 
@@ -36,7 +39,7 @@ class Post extends React.Component {
                     </div>
                     <div >
                         <div className = 'action-icons'>
-                            <i className ={"far fa-heart"} onClick = { this.addALike }></i>
+                            <i className ={this.state.active ? "fas fa-heart" : "far fa-heart"} onClick = { this.addALike }></i>
                             <i className = "far fa-comment"></i>
                         </div>
                         <span className = 'likes'>{this.state.likes} likes</span>
