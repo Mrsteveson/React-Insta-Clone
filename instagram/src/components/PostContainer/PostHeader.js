@@ -4,10 +4,10 @@ import './Post.css';
 const PostHeader = props => {
     return(
         <div className = 'postHeader'>
-            <div className = 'userThumbnail'>
-                <img src = {props.dummy.thumbnailUrl} alt = 'user thumbnail'/>
-            </div>
             <div>
+                <img className = 'userThumbnail' src = {props.dummy.thumbnailUrl} alt = 'user thumbnail'/>
+            </div>
+            <div className = 'header-username'>
                 {props.dummy.username}
             </div>
         </div>

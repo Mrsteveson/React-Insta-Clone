@@ -5,17 +5,21 @@ import './Post.css';
 
 const Post = props => {
     return(
-        <div className = 'postContainer'>
+        <div>
             <PostHeader dummy = {props.post}/>
-            <div className = 'postImg'>
-                <img src = {props.post.imageUrl} alt = 'post content'/>
+            <div className = 'post-content'>
+                <div className = 'postImg'>
+                    <img className = 'imageUrl' src = {props.post.imageUrl} alt = 'post content'/>
+                </div>
+                <div >
+                    <div className = 'action-icons'>
+                        <i className = "far fa-heart"></i>
+                        <i className = "far fa-comment"></i>
+                    </div>
+                    <span className = 'likes'>{props.likes} Likes</span>
+                </div>
+                <CommentSection comments = {props.post.comments} />
             </div>
-            <div className = 'action-icons'>
-                <i className = "far fa-heart"></i>
-                <i className = "far fa-comment"></i>
-                <p>{props.likes}</p>
-            </div>
-            <CommentSection comments = {props.post.comments} />
         </div>
     )
 }

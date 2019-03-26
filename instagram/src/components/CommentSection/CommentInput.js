@@ -5,8 +5,9 @@ const CommentInput = props => {
         <div>
             <form>
                 <input
+                    className = 'commentInput'
                     type = 'text'
-                    placeholder = "Post A Comment"
+                    placeholder = "Add a comment..."
                 />
             </form>
         </div>

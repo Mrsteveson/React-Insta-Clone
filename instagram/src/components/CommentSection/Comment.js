@@ -4,9 +4,8 @@ import './Comment.css';
 
 const Comment = props => {
     return (
-        <div>
-            <p className = 'commentUser'>{props.comment.username}</p>
-            <p className = 'commentText'>{props.comment.text}</p>
+        <div className = 'comments'>
+            <p className = 'commentUser'><span>{props.comment.username}</span>{props.comment.text}</p>
         </div>
     )
 }
