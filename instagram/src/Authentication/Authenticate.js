@@ -3,9 +3,9 @@ import Login from '../components/Login/Login';
 
 const Authenticate = App => 
     class extends React.Component {
-        constructor(){
+        constructor() {
             super();
-            this.setState = {
+            this.state = {
                 loggedIn: false,
             };
         }
@@ -21,7 +21,7 @@ const Authenticate = App =>
         } 
 
         render() {
-            // if(this.state.loggedIn === true) return <App />;
+            if(this.state.loggedIn === true) return <App />;
             // return <App />
             return <Login />;
         }

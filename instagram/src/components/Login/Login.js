@@ -31,6 +31,7 @@ class Login extends React.Component {
                     placeholder = 'Username'
                     value = {this.state.username}
                     onChange = {this.handleInputChange}
+                    name = 'username'
                 /> 
 
                 <input 
@@ -39,6 +40,7 @@ class Login extends React.Component {
                     placeholder = 'Password'
                     value = {this.state.password}
                     onChange = {this.handleInputChange}
+                    name = 'password'
                 />
                 <button onClick = {this.handleLogin}>Login!</button>
             </form>
