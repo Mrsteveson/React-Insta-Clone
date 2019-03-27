@@ -13,7 +13,7 @@ const SearchBar = props => {
                 className = 'the-search-bar'
                 type = 'text'
                 placeholder = 'Input Search'
-                onKeyDown = {props.search}
+                onChange = {props.search}
             />
             <div className = 'search-action-icons'>
                 <i className = "far fa-compass"></i>
