@@ -24,6 +24,8 @@ const Authenticate = App =>
             this.setState({
                 loggedIn: false,
             })
+
+            localStorage.clear();
         }
 
         render() {
