@@ -16,6 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <button className = 'logoutBtn' onClick = {this.props.logout}>Logout</button>
         <PostsPage />
       </div>
     );

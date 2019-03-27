@@ -20,8 +20,14 @@ const Authenticate = App =>
             }
         } 
 
+        handleLogout = event => {
+            this.setState({
+                loggedIn: false,
+            })
+        }
+
         render() {
-            if(this.state.loggedIn === true) return <App />;
+            if(this.state.loggedIn === true) return <App logout = {this.handleLogout}/>;
             // return <App />
             return <Login />;
         }
