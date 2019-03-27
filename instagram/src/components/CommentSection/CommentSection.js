@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
         // console.log(props);
         this.state = {
             comments: props.comments,
-            comment: ''
+            comment: '',
         };
     }
 
@@ -26,10 +26,21 @@ class CommentSection extends React.Component {
             comments: [
                 ...this.state.comments,
                 {username: 'Waffle191',
-                text: this.state.comment}
+                text: this.state.comment,
+                id: '27'}
             ],
             comment: '',
         });
+    }
+
+    deleteComment = (event) => {
+        event.preventDefault();
+
+        this.setState({
+            comments: this.state.comments.filter(comment => comment.id !== event.currentTarget.id)
+        
+        })
+        // console.log(event.currentTarget.id);
     }
 
     render() {
@@ -38,6 +49,7 @@ class CommentSection extends React.Component {
                 {this.state.comments && this.state.comments.map(comment => (
                     <Comment 
                         comment = {comment}
+                        deleted = {this.deleteComment}
                     />
                 ))}
                 <CommentInput 

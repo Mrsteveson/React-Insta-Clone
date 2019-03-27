@@ -5,7 +5,7 @@ import './Comment.css';
 const Comment = props => {
     return (
         <div className = 'comments'>
-            <p className = 'commentUser'><span>{props.comment.username}</span>{props.comment.text}</p>
+            <p className = 'commentUser'><button className = 'deleteBtn' id = {props.comment.id} onClick = {props.deleted}>x</button><span>{props.comment.username}</span>{props.comment.text}</p>
         </div>
     )
 }
