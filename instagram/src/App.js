@@ -36,7 +36,7 @@ class App extends React.Component {
           search = {this.handleSearch} 
         />
         <PostContainer 
-          dummy = {this.state.filter.length > 0 ? this.state.filter : this.state.posts} 
+          dummy = {this.state.filter.length === 0 ?  this.state.posts : this.state.filter } 
         />
       </div>
     );
