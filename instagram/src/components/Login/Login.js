@@ -39,7 +39,7 @@ class Login extends React.Component {
 
                     <input 
                         className = 'loginInput'
-                        type = 'text'
+                        type = 'password'
                         placeholder = 'Password'
                         value = {this.state.password}
                         onChange = {this.handleInputChange}
