@@ -16,6 +16,9 @@ const LogoutButton = styled.button `
   padding: 5px;
   background-color: white;
   margin-top: 5px;
+  position: absolute;
+  right: 700px;
+  top: 18px;
 `;
 
 class App extends React.Component {
