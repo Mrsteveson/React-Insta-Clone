@@ -1,4 +1,4 @@
-.loginContainer {
+/* .loginContainer {
     background-image: linear-gradient(pink, lightblue, pink);
     max-width: 400px;
     max-height: 400px;
@@ -7,28 +7,28 @@
     border: 3px solid silver;
     border-radius: 12.5%;
     margin-top: 100px;
-}
+} */
 
-h1 {
+/* h1 {
     color: black;
     text-align: center;
-}
+} */
 
-.loginForm {
+/* .loginForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.loginInput {
+/* .loginInput {
     border-radius: 10px;
     padding: 10px 10px;
     margin-bottom: 5px;
-}
+} */
 
-button {
+/* button {
     border-radius: 10px;
     padding: 10px;
     font-weight: bold;
-}
+} */

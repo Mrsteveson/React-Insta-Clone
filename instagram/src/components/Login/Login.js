@@ -1,5 +1,41 @@
 import React from 'react';
-import './Login.css';
+// import './Login.css';
+import styled from 'styled-components';
+
+
+const LoginContainer = styled.div `
+    background-image: linear-gradient(pink, lightblue, pink);
+    max-width: 400px;
+    max-height: 400px;
+    padding: 100px;
+    margin: auto;
+    border: 3px solid silver;
+    border-radius: 12.5%;
+    margin-top: 100px;
+`;
+
+const Title = styled.h1 `
+    text-align: center;
+`;
+
+const LoginForm = styled.form `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const LoginInput = styled.input `
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+`;
+
+const LoginButton = styled.button `
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+`;
+
 
 class Login extends React.Component {
     constructor (props) {
@@ -25,11 +61,10 @@ class Login extends React.Component {
     
     render(){
         return(
-            <div className = 'loginContainer'>
-                <h1>Welcome to Patrick's FakeGram</h1>
-                <form className = 'loginForm'>
-                    <input 
-                        className = 'loginInput'
+            <LoginContainer>
+                <Title>Welcome to Patrick's FakeGram</Title>
+                <LoginForm>
+                    <LoginInput 
                         type = 'text'
                         placeholder = 'Username'
                         value = {this.state.username}
@@ -37,17 +72,16 @@ class Login extends React.Component {
                         name = 'username'
                     /> 
 
-                    <input 
-                        className = 'loginInput'
+                    <LoginInput 
                         type = 'password'
                         placeholder = 'Password'
                         value = {this.state.password}
                         onChange = {this.handleInputChange}
                         name = 'password'
                     />
-                    <button onClick = {this.handleLogin}>Login</button>
-                </form>
-            </div>
+                    <LoginButton onClick = {this.handleLogin}>Login</LoginButton>
+                </LoginForm>
+            </LoginContainer>
             
         )
     }
